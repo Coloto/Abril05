@@ -32,42 +32,42 @@ public class Main {
 
     public static LocalDate inicioCurso(int dias) {
         LocalDate inicioCurso = LocalDate.of(2024, 04, 02);
-        return inicioCurso.plusDays(dias);
+        return inicioCurso.plusDays(dias); //devuelve la fecha de los 10 días siguientes al inicio del curso
     }
 
     public static LocalDate fechaHoy() {
-        return LocalDate.now();
+        return LocalDate.now(); //devuelve la fecha actual de la zona horaria predeterminada
     }
 
     public static LocalDate fechaZonaAustralia() {
         ZoneId sydneyZone = ZoneId.of("Australia/Sydney");
-        return LocalDate.now(sydneyZone);
+        return LocalDate.now(sydneyZone); //devuelve la fecha actual de la zona horaria establecida
     }
 
     public static LocalDate diaCien() {
         LocalDate diaUno = LocalDate.of(2024,1,1);
-        return diaUno.plusDays(99);
+        return diaUno.plusDays(99); //devuelve la fecha del dia 99 despues del primer dia del año (el dia 100 del año)
     }
 
     public static String a() {
         LocalDate navidad = LocalDate.of(2024,12,25);
         LocalDate nocheVieja = LocalDate.of(2024, 12,31);
-        return "Navidad es antes de nochevieja: " + navidad.isBefore(nocheVieja) + "\nNochevieja es antes de navidad: " + navidad.isAfter(nocheVieja);
+        return "Navidad es antes de nochevieja: " + navidad.isBefore(nocheVieja) + "\nNochevieja es antes de navidad: " + navidad.isAfter(nocheVieja); //devuelve una cadena de texto que afirma que navidad es antes de nochevieja usando isAfter e isBefore
     }
 
     public static LocalDate b() {
         LocalDate quinceMarzo = LocalDate.of(2024, 3, 15);
-        return quinceMarzo.plusWeeks(35);
+        return quinceMarzo.plusWeeks(35); //devuelve la fecha de las siguientes 35 semanas empezando por el 15 de marzo
     }
 
     public static Period empleado() {
         LocalDate empleado = LocalDate.of(2012, 7, 6);
-        return Period.between(empleado,LocalDate.now());
+        return Period.between(empleado,LocalDate.now()); //devuelve el periodo entre la fecha de inicio del empleado en la empresa y la fecha actual
     }
 
     public static Period persona() {
         LocalDate persona = LocalDate.of(2007,8,7);
-        return Period.between(persona,LocalDate.now());
+        return Period.between(persona,LocalDate.now()); //devuelve el periodo entre la fecha del nacimiento de la persona y la fecha actual
     }
 
     public static LocalDate empezarProyecto() {
