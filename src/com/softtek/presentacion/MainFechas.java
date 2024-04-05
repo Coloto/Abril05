@@ -5,7 +5,7 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-public class Main {
+public class MainFechas {
 
     public static void main(String[] args) {
 
