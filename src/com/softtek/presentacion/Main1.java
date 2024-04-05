@@ -6,16 +6,19 @@ import com.softtek.modelo.empleado.Gerente;
 import com.softtek.modelo.empleado.Operador;
 import com.softtek.modelo.empleado.Vendedor;
 import com.softtek.modelo.figuras.Cuadrado;
+import com.softtek.modelo.figuras.Figura;
 import com.softtek.modelo.figuras.Triangulo;
 import com.softtek.modelo.producto.Producto;
 import com.softtek.modelo.producto.ProductoPerecedero;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Main1 {
     public static void main(String[] args) {
         //ejercicio1();
         //ejercicio2();
+        ejercicio3();
     }
 
     public static void ejercicio1() {
@@ -56,7 +59,14 @@ public class Main1 {
         tPeque.setBase(5);
         Triangulo tMediano = new Triangulo(8,4);
 
+        ArrayList<Figura> figuras = new ArrayList<>();
+        figuras.add(cPeque);
+        figuras.add(cMediano);
+        figuras.add(tPeque);
+        figuras.add(tMediano);
 
-
+        for (Figura figura : figuras){
+            System.out.println("El area es " + figura.calcularArea());
+        }
     }
 }
