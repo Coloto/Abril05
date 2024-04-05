@@ -8,9 +8,14 @@ import com.softtek.modelo.empleado.Vendedor;
 import com.softtek.modelo.figuras.Cuadrado;
 import com.softtek.modelo.figuras.Figura;
 import com.softtek.modelo.figuras.Triangulo;
+import com.softtek.modelo.instrumento.Bateria;
+import com.softtek.modelo.instrumento.Flauta;
+import com.softtek.modelo.instrumento.Guitarra;
+import com.softtek.modelo.instrumento.InstrumentoMusical;
 import com.softtek.modelo.producto.Producto;
 import com.softtek.modelo.producto.ProductoPerecedero;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -18,7 +23,8 @@ public class Main1 {
     public static void main(String[] args) {
         //ejercicio1();
         //ejercicio2();
-        ejercicio3();
+        //ejercicio3();
+        ejercicio4();
     }
 
     public static void ejercicio1() {
@@ -67,6 +73,21 @@ public class Main1 {
 
         for (Figura figura : figuras){
             System.out.println("El area es " + figura.calcularArea());
+        }
+    }
+
+    public static void ejercicio4() {
+        Guitarra guido = new Guitarra("MarcaGuido", "Flatwound");
+        Bateria bataca = new Bateria("MarcaBataca", 5);
+        Flauta ham = new Flauta("MarcaHam", "metal");
+
+        ArrayList<InstrumentoMusical> instrumentosMusicales = new ArrayList<>();
+        instrumentosMusicales.add(guido);
+        instrumentosMusicales.add(bataca);
+        instrumentosMusicales.add(ham);
+
+        for (InstrumentoMusical instrumento : instrumentosMusicales){
+            System.out.println(instrumento.emitirSonido());
         }
     }
 }
