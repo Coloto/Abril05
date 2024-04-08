@@ -18,7 +18,13 @@ public class Cuadrado extends Figura{
         this.lado = lado;
     }
 
+    @Override
     public double calcularArea() {
         return Math.pow(lado, 2);
+    }
+
+    @Override
+    public String mostrarPsoicion() {
+        return null;
     }
 }

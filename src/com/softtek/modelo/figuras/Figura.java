@@ -1,6 +1,6 @@
 package com.softtek.modelo.figuras;
 
-public class Figura {
+public abstract class Figura {
     protected int x;
     protected int y;
 
@@ -24,10 +24,7 @@ public class Figura {
         this.y = y;
     }
 
-    public double calcularArea(){
-        return 0;
-    }
-    public String mostrarPsoicion(){
-        return null;
-    }
+
+    public abstract double calcularArea();
+    public abstract String mostrarPsoicion();
 }

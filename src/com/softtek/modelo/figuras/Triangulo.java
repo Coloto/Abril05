@@ -28,7 +28,13 @@ public class Triangulo extends Figura{
         this.altura = altura;
     }
 
+    @Override
     public double calcularArea(){
         return base*altura/2;
+    }
+
+    @Override
+    public String mostrarPsoicion() {
+        return null;
     }
 }
