@@ -1,13 +1,11 @@
 package com.softtek.modelo.instrumento;
 
-public class InstrumentoMusical {
+public abstract class InstrumentoMusical {
     protected String marca;
 
     public InstrumentoMusical(String marca) {
         this.marca = marca;
     }
 
-    public String emitirSonido() {
-        return "sonido";
-    }
+    public abstract String emitirSonido();
 }
